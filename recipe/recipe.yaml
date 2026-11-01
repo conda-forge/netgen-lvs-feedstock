@@ -1,5 +1,5 @@
 context:
-  version: "1.5.326"
+  version: "1.5.327"
 
 package:
   name: netgen-lvs
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/RTimothyEdwards/netgen/archive/${{ version }}.tar.gz
-  sha256: f9de6d592e5409f9d4396268615454b7f3da399fae109eb5b629d0a21aeb8f13
+  sha256: 9f9e33cf5dbc7a7d0b90a0fb10926f2f1847520248a5f03e129ba7ef61deea7e
 
 build:
   number: 0
