@@ -29,8 +29,9 @@ requirements:
 
 tests:
   - script:
-      # Simple test to verify the binary was linked properly and executes
-      - echo "quit" | netgen
+      - test -x $PREFIX/bin/netgen
+      - test -f $PREFIX/lib/netgen/tcl/tclnetgen.so
+      - test -f $PREFIX/lib/netgen/tcl/netgen.tcl
 
 about:
   homepage: https://github.com/RTimothyEdwards/netgen
