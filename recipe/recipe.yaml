@@ -1,5 +1,5 @@
 context:
-  version: "1.5.328"
+  version: "1.5.329"
 
 package:
   name: netgen-lvs
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/RTimothyEdwards/netgen/archive/${{ version }}.tar.gz
-  sha256: be30dde15f3f3b3632d35a334d2976abb27d72403b0f93a03ea97285f777eaea
+  sha256: 649400f3a5b872a79c42d4f36d003b32db2bab3503e94117d715abce01f84c4d
 
 build:
   number: 0
@@ -29,8 +29,9 @@ requirements:
 
 tests:
   - script:
-      # Simple test to verify the binary was linked properly and executes
-      - echo "quit" | netgen
+      - test -x $PREFIX/bin/netgen
+      - test -f $PREFIX/lib/netgen/tcl/tclnetgen.so
+      - test -f $PREFIX/lib/netgen/tcl/netgen.tcl
 
 about:
   homepage: https://github.com/RTimothyEdwards/netgen
